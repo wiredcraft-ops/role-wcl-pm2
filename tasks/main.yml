@@ -1,6 +1,7 @@
 - name: Install pm2
   npm:
     name: pm2
+    version: "{{ pm2_version }}"
     global: true
 
 - name: Create pm2 group
