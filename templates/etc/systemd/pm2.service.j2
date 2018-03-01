@@ -5,13 +5,13 @@ After=network.target
 
 [Service]
 Type=forking
-User=pm2
+User={{ pm2_user }}
 LimitNOFILE=infinity
 LimitNPROC=infinity
 LimitCORE=infinity
 Environment=PATH=/usr/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
-Environment=PM2_HOME=/var/lib/pm2/.pm2
-PIDFile=/var/lib/pm2/.pm2/pm2.pid
+Environment=PM2_HOME={{ pm2_home }}/.pm2
+PIDFile={{ pm2_home }}/.pm2/pm2.pid
 
 ExecStart=/usr/lib/node_modules/pm2/bin/pm2 resurrect
 ExecReload=/usr/lib/node_modules/pm2/bin/pm2 reload all

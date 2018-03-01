@@ -1,0 +1,4 @@
+---
+pm2_home: /var/lib/pm2
+pm2_user: pm2
+pm2_group: pm2

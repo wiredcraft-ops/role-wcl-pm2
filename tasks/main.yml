@@ -5,13 +5,13 @@
 
 - name: Create pm2 group
   group:
-    name: pm2
+    name: "{{ pm2_group }}"
 
 - name: Create pm2 user
   user:
-    name: pm2
-    group: pm2
-    home: /var/lib/pm2
+    name: "{{ pm2_user }}"
+    group: "{{ pm2_group }}"
+    home: "{{ pm2_home }}"
     shell: /bin/false
 
 - name: Add systemd config file
@@ -22,7 +22,7 @@
     group: root
     mode: 0644
 
-- name: Start pm2 service
+- name: Enable and Start pm2 service
   systemd:
     name: pm2
     state: started
