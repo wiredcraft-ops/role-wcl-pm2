@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: WCL
+  description: install and configure pm2
+  license: MIT
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: Ubuntu
+      versions:
+        - xenial
+    - name: Debian
+      versions:
+        - jessie
+  galaxy_tags:
+    - process manager
+dependencies: []

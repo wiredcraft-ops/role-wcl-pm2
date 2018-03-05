@@ -21,3 +21,12 @@ ansible-galaxy install -r requirements.yml -p roles
   roles:
     - role: wcl-pm2
 ```
+
+### Default variables
+
+```yaml
+pm2_home: /var/lib/pm2
+pm2_user: pm2
+pm2_group: pm2
+pm2_version: latest
+```
